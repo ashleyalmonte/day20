@@ -1,0 +1,27 @@
+ const ALL_CARS =[]
+
+  function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     data = JSON.parse(this.responseTEXT)
+     for (item in data) {
+       console.log(data[item])
+     }
+    }
+  };
+  xhttp.open("GET", "https://raw.githubusercontent.com/mlaw-nycda/empireCommerce/master/cars.json", true);
+  xhttp.send();
+}
+ Class car {
+   constructor(vin, make, model, year, color) {
+     this.vin = vin
+     this.make = make
+     this.model = model
+     this.year = year
+     this.color = color
+     if (ALL_CARS.length < 15) {
+       ALL_CARS.push(this)
+     }
+   }
+ }
