@@ -13,8 +13,7 @@
          data[item].model,
          data[item].model_year,
          data[item].color)
-         if (car.make = 
-         cars_sorted[data[item].make] = []
+         cars_sorted[data[item].make] =
      }
     }
   };
