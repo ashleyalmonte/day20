@@ -1,10 +1,10 @@
  const ALL_CARS =[]
 
   function loadDoc() {
-  var xhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest(); // create and xhr object -- request object
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     data = JSON.parse(this.responseTEXT)
+    if (this.readyState == 4 && this.status == 200) { // everything this take place between this block
+     let data = JSON.parse(this.responseTEXT)
      for (item in data) {
        console.log(data[item])
      }
