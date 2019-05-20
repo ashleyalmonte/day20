@@ -1,4 +1,5 @@
  const ALL_CARS =[]
+ cars_sorted = { }
 
   function loadDoc() {
   var xhttp = new XMLHttpRequest(); // create and xhr object -- request object
@@ -12,6 +13,8 @@
          data[item].model,
          data[item].model_year,
          data[item].color)
+         if (car.make = 
+         cars_sorted[data[item].make] = []
      }
     }
   };
