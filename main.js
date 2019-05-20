@@ -6,7 +6,12 @@
     if (this.readyState == 4 && this.status == 200) { // everything this take place between this block
      let data = JSON.parse(this.responseTEXT)
      for (item in data) {
-       console.log(data[item])
+       let car = new Car(item)
+       car.make = new Car(item,
+         data[item].make,
+         data[item].model,
+         data[item].model_year,
+         data[item].color)
      }
     }
   };
